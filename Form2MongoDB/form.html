@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Lomake, jolla lähetetään tietoa MongoDB:lle</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/post" method="post">
+            <label for="reknro">Rekisteröintinumero: </label>
+            <input type="text" id="reknro" name="reknro">
+            <label for="nimi">Nimi: </label>
+            <input type="text" id="nimi" name="nimi">
+            <label for="email">Sähköposti: </label>
+            <input type="text" id="email" name="email">
+            <label for="linja">Linja: </label>
+            <select name="linja" id="linja">
+                <option value="ohjelmointi">Ohjelmointi</option>
+                <option value="IT-tuki">IT-tuki</option>
+                <option value="media">Media</option>
+                <option value="kirjanpito">Kirjanpito</option>
+                <option value="markkinointi">Markkinointi</option>
+            </select>
+            <button type="submit">Lähetä</button>
+        </form>
+    </div>
+</body>
+</html>
