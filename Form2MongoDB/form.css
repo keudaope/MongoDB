@@ -39,3 +39,7 @@ form button{
     font-size: 25px;
     color:aliceblue;
 }
+table{
+    max-width: 900px;
+    margin: 0 auto;
+}
