@@ -67,6 +67,27 @@ app.post('/post', async (req, res)=>{
     res.redirect('/data');
 });
 
+app.get('/data/:id', (req, res) => {
+    const id = req.params.id;
+    Users.findById(id)
+    .then(result => {
+        res.render('details', {users: result});
+    })
+    .catch(err => {
+        console.log(err);
+    });
+})
+
+app.get('/remove/:id', (req, res) => {
+    const id = req.params.id;
+    Users.deleteOne(id)
+    . then(result => {
+        res.render('removed');
+    })
+    .catch(err => {
+        console.log(err);
+    })
+    })
 // Kuunnellaan 3000-portin tapahtumia
 app.listen(port, () => {
     console.log("Palvelin käynnistetty");
