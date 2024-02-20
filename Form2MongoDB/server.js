@@ -78,16 +78,7 @@ app.get('/data/:id', (req, res) => {
     });
 })
 
-app.get('/remove/:id', (req, res) => {
-    const id = req.params.id;
-    Users.deleteOne(id)
-    . then(result => {
-        res.render('removed');
-    })
-    .catch(err => {
-        console.log(err);
-    })
-    })
+
 // Kuunnellaan 3000-portin tapahtumia
 app.listen(port, () => {
     console.log("Palvelin käynnistetty");
